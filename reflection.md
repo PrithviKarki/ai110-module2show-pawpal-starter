@@ -69,3 +69,18 @@
 **c. Key takeaway**
 
 - What is one important thing you learned about designing systems or working with AI on this project?
+
+
+3 core actions:-
+- Add pet(s) details
+- Add Tasks 
+- Complete Tasks
+- Set priority
+- Order Tasks
+- Generate a Daily plan 
+
+Objects:- 
+- Owner (Name, List pets)
+- Pet (Name, species, Type, Age)
+- Scheduler (type, priority)
+- Tasks (Logic)

@@ -1,15 +1,72 @@
 classDiagram
-    %% Replace the placeholders below with your actual classes, attributes, methods, and relationships.
-    %% Keep this file updated so it matches your final implementation.
+    direction LR
 
-    class ClassName {
-        +type attribute
-        +method() returnType
+    class Owner {
+        +str name
+        +str email
+        +list~Pet~ pets
+        +int daily_minutes_available
+        +list~str~ preferred_times
+        +add_pet(pet Pet) None
+        +remove_pet(pet_name str) bool
+        +get_pet(pet_name str) Pet
+        +list_pets() list~Pet~
+        +total_daily_task_load() int
     }
 
-    class AnotherClass {
-        +type attribute
-        +method() returnType
+    class Pet {
+        +str name
+        +str species
+        +str breed
+        +int age
+        +float weight_kg
+        +list~Task~ tasks
+        +add_task(task Task) None
+        +remove_task(task_id str) bool
+        +get_tasks(only_due bool) list~Task~
+        +is_senior() bool
+        +daily_activity_need() int
     }
 
-    ClassName --> AnotherClass : relationship
+    class Task {
+        +str task_id
+        +str title
+        +str category
+        +int duration_min
+        +str priority
+        +str preferred_time
+        +bool recurring
+        +bool completed
+        +str notes
+        +priority_score() int
+        +mark_complete() None
+        +reset() None
+        +fits_in(minutes_left int) bool
+        +__str__() str
+    }
+
+    class Scheduler {
+        +str strategy
+        +int available_minutes
+        +str start_time
+        +list~ScheduledTask~ plan
+        +list~Task~ skipped
+        +build_plan(pet Pet, minutes int) list~ScheduledTask~
+        +sort_tasks(tasks list~Task~) list~Task~
+        +assign_times(tasks list~Task~) list~ScheduledTask~
+        +explain() str
+        +clear() None
+    }
+
+    class ScheduledTask {
+        +Task task
+        +str start_time
+        +str end_time
+        +str reason
+    }
+
+    Owner "1" *-- "0..*" Pet : owns
+    Pet "1" *-- "0..*" Task : needs
+    Scheduler ..> Pet : reads tasks from
+    Scheduler "1" o-- "0..*" ScheduledTask : produces
+    ScheduledTask "1" --> "1" Task : wraps
