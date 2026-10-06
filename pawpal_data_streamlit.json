@@ -1,0 +1,68 @@
+{
+    "name": "Jordan",
+    "email": "",
+    "daily_minutes_available": 120,
+    "preferred_times": [],
+    "pets": [
+        {
+            "name": "Mochi",
+            "species": "dog",
+            "breed": "",
+            "age": 0,
+            "weight_kg": 0.0,
+            "tasks": [
+                {
+                    "task_id": "5c8ef11e-a19d-4f8d-af1f-03bc4f41f7d8",
+                    "title": "Morning walk",
+                    "category": "Exercise",
+                    "duration_min": 20,
+                    "priority": "high",
+                    "preferred_time": "any",
+                    "recurring": true,
+                    "completed": true,
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "name": "Cookie",
+            "species": "cat",
+            "breed": "",
+            "age": 0,
+            "weight_kg": 0.0,
+            "tasks": [
+                {
+                    "task_id": "6c176a0b-200c-402f-a2ba-c7d93e008e68",
+                    "title": "Haircut",
+                    "category": "Grooming ",
+                    "duration_min": 30,
+                    "priority": "medium",
+                    "preferred_time": "any",
+                    "recurring": true,
+                    "completed": false,
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "name": "Goldie ",
+            "species": "other",
+            "breed": "",
+            "age": 0,
+            "weight_kg": 0.0,
+            "tasks": [
+                {
+                    "task_id": "d8dba02e-5c8d-4375-bab5-584e87ee1566",
+                    "title": "Water tank cleaning",
+                    "category": "Maintenance ",
+                    "duration_min": 45,
+                    "priority": "low",
+                    "preferred_time": "any",
+                    "recurring": true,
+                    "completed": false,
+                    "notes": ""
+                }
+            ]
+        }
+    ]
+}
